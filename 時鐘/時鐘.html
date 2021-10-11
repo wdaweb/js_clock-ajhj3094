@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body onload="ShowTime()">
+  <img src="./images/stars.png" class="star">
+  <img src="./images/stars.png" class="star1">
+  <img src="./images/stars.png" class="star2">
+  <img src="./images/Earth.png" class="earth">
+  <img src="./images/Moon.png" class="moon">
+  <img src="./images/white_base.png" class="white-base">
+  <img src="./images/Saturn.png" class="Saturn">
+
+
+  <div id="clock">
+    <img src="./images/s1.png">
+    <img src="./images/s2.png">
+    <img src="./images/s3.png">
+    <img src="./images/s4.png">
+    <img src="./images/s5.png">
+    <img src="./images/s6.png">
+    <img src="./images/s7.png">
+    <img src="./images/s8.png">
+    <img src="./images/s9.png">
+    <img src="./images/s10.png">
+    <img src="./images/s11.png">
+    <img src="./images/s12.png">
+
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+    <div id="circle"></div>
+    <div class="twelve number">XII</div>
+    <div class="three number">III</div>
+    <div class="six number">VI</div>
+    <div class="nine number">IX</div>
+  </div>
+
+  <div class="typing-txt-block bg-animation">
+    <div class="container">
+      <div class="row typing-txt-row">
+        <h1 data-text="TRY HOVERING OVER A PLANET">TRY HOVERING OVER A PLANET</h1>
+      </div>
+    </div>
+  </div>
+
+  <form id="form1" runat="server">
+    <div id="showbox"></div>
+  </form>
+
+
+  <script>
+    const hour = document.getElementById('hour')
+    const minute = document.getElementById('minute')
+    const second = document.getElementById('second')
+
+
+    setInterval(() => {
+      const now = new Date()
+      hour.style.transform = `rotate(${30 * now.getHours() - 90}deg)`
+      minute.style.transform = `rotate(${6 * now.getMinutes() - 90}deg)`
+      second.style.transform = `rotate(${6 * now.getSeconds() - 90}deg)`
+
+    }, 1000)
+
+    // updateClock()
+    // setInterval(updateClock, 1000)
+
+    function ShowTime() {
+      var NowDate = new Date();
+      var d = NowDate.getDay();
+      var dayNames = new Array("Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.");
+      document.getElementById('showbox').innerHTML = `${NowDate.getYear() + 1900}&nbsp;-&nbsp;${NowDate.getMonth() + 1}&nbsp;-&nbsp;${NowDate.getDate()}&nbsp;&nbsp;&nbsp;&nbsp;` + dayNames[d] + `&nbsp;&nbsp;&nbsp;&nbsp;` + NowDate.getHours() + '&nbsp;:&nbsp;' + NowDate.getMinutes() + '&nbsp;:&nbsp;' + NowDate.getSeconds();
+      setTimeout('ShowTime()', 1000);
+    }
+
+  </script>
+</body>
+
+</html>

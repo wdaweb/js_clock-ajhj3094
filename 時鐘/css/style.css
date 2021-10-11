@@ -1,0 +1,506 @@
+html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(at 50% 30%, #6e9eb3, #434c53, #0b0b0c);
+    background-blend-mode: multiply;
+    overflow: hidden;
+  }
+
+  .star {
+    background-image: url("");
+    opacity: 30%;
+    position: absolute;
+    width: 1600px;
+    top: -1%;
+    left: -28%;
+    margin: auto;
+    border-radius: 50%;
+    animation: img 800s linear infinite;
+  }
+
+  .star1 {
+    background-image: url("");
+    opacity: 30%;
+    position: absolute;
+    width: 1600px;
+    top: -4%;
+    left: 6%;
+    margin: auto;
+    border-radius: 50%;
+    animation: img 800s linear infinite;
+  }
+
+  .star2 {
+    background-image: url("");
+    opacity: 30%;
+    position: absolute;
+    width: 1600px;
+    top: -1%;
+    left: 45%;
+    margin: auto;
+    border-radius: 50%;
+    animation: img 800s linear infinite;
+  }
+
+  @keyframes img {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    1% {
+      opacity: 50%;
+    }
+
+    2% {
+      opacity: 20%;
+    }
+
+    3% {
+      opacity: 50%;
+    }
+
+    4% {
+      opacity: 20%;
+    }
+
+    5% {
+      opacity: 50%;
+    }
+
+    6% {
+      opacity: 20%;
+    }
+
+    7% {
+      opacity: 50%;
+    }
+
+    8% {
+      opacity: 20%;
+    }
+
+    9% {
+      opacity: 50%;
+    }
+
+    10% {
+      opacity: 20%;
+    }
+
+    11% {
+      opacity: 50%;
+    }
+
+    12% {
+      opacity: 20%;
+    }
+
+    13% {
+      opacity: 50%;
+    }
+
+    14% {
+      opacity: 20%;
+    }
+
+    15% {
+      opacity: 50%;
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  #clock {
+    background: rgba(179, 162, 133, 0.1);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+    position: relative;
+    /* relative 最外層，似乎無法用 % 做定位，再查詢相關資料 */
+    top: 100px;
+    /* 水平置中 */
+    margin: auto;
+    outline: none;
+
+    box-shadow: 0px 0px 20px rgba(101, 164, 216, 0.767);
+    background-position: center;
+    background-size: contain;
+    box-sizing: border-box;
+    transition: .4s;
+    animation: clock 15s linear infinite;
+    backdrop-filter: blur(.5px);
+    cursor: pointer;
+  }
+
+  @keyframes clock {
+    0% {
+      position: relative;
+      top: 100px;
+      margin: auto;
+    }
+
+    50% {
+      position: relative;
+      top: 150px;
+      margin: auto;
+    }
+
+    100% {
+      position: relative;
+      top: 100px;
+      margin: auto;
+    }
+  }
+
+  #clock:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 100px rgba(75, 172, 196, 0.8));
+  }
+
+  #clock img {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+  }
+
+
+  #hour {
+    background: white;
+    width: 20%;
+    height: 10px;
+    border-radius: 5px;
+    /* calc 裡數學符號前面一定要有空格，否則無效 */
+    top: calc(50% - 5px);
+    left: 50%;
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: left center;
+    box-shadow: 0px 0px 12px rgba(179, 162, 133, 0.8);
+
+  }
+
+  #minute {
+    background: rgba(246, 246, 246, 0.6);
+    width: 45%;
+    height: 10px;
+    border-radius: 5px;
+    /* calc 裡數學符號前面一定要有空格，否則無效 */
+    top: calc(50% - 5px);
+    left: 50%;
+    position: relative;
+    transform: rotate(0deg);
+    transform-origin: left center;
+    box-shadow: 0px 0px 12px rgba(179, 162, 133, 0.7);
+
+  }
+
+  #second {
+    background: rgba(250, 247, 223, 0.6);
+    width: 48%;
+    height: 10px;
+    border-radius: 5px;
+    /* calc 裡數學符號前面一定要有空格，否則無效 */
+    top: calc(50% - 5px);
+    left: 50%;
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: left center;
+    box-shadow: 0px 0px 12px rgba(179, 162, 133, 0.6);
+
+  }
+
+  #circle {
+    background: rgba(255, 255, 255, 0.9);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 12px rgba(179, 162, 133, 0.6);
+
+  }
+
+  .number {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3rem;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.9);
+  }
+
+  .twelve {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .three {
+    position: absolute;
+    top: 50%;
+    right: -30%;
+    transform: translate(-50%, -50%);
+  }
+
+  .six {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nine {
+    position: absolute;
+    top: 50%;
+    left: -12%;
+    transform: translate(-50%, -50%);
+  }
+
+  .earth {
+    position: absolute;
+    opacity: 0.6;
+    top: 63%;
+    left: 22%;
+    transform: translateX(-50%);
+    animation: earth 100s linear infinite;
+    filter: drop-shadow(0px 0px 30px rgba(84, 164, 230, 0.719));
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  .earth:hover {
+    filter: drop-shadow(0px 0px 90px rgba(84, 164, 230, 0.719));
+    opacity: 0.9;
+  }
+
+  @keyframes earth {
+    0% {
+      transform: rotate(-10deg);
+    }
+
+    25% {
+      transform: rotate(5deg);
+    }
+
+    50% {
+      transform: rotate(-15deg);
+    }
+
+    75% {
+      transform: rotate(5deg);
+    }
+
+    100% {
+      transform: rotate(-15deg);
+    }
+  }
+
+  .moon {
+    width: 100px;
+
+    position: absolute;
+    opacity: 0.6;
+    top: 30%;
+    left: 18%;
+    animation: moon 60s linear infinite;
+    filter: drop-shadow(0px 0px 30px rgba(168, 201, 243, 0.835));
+    transition: .4s;
+    cursor: pointer;
+  }
+
+  @keyframes moon {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    20% {
+      top: 32%;
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .moon:hover {
+    width: 102px;
+    filter: drop-shadow(0 0 100px rgba(77, 145, 235, 0.808));
+    opacity: 0.9;
+  }
+
+  .white-base {
+    width: 280px;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 180px;
+    right: 15%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    filter: drop-shadow(0px 0px 70px rgba(255, 255, 255, 0.835));
+    animation: white-space 150s linear infinite;
+  }
+
+  @keyframes white-space {
+    0% {}
+
+    100% {
+      right: 85%;
+      transform: scale(1.5);
+      opacity: 0.95;
+    }
+  }
+
+  .white-base:hover {
+    width: 285px;
+    opacity: 0.95;
+    filter: drop-shadow(0px 0px 90px rgba(255, 255, 255, 0.979));
+  }
+
+  .Saturn {
+    width: 120px;
+    opacity: 0.7;
+    position: absolute;
+    top: 180px;
+    right: 25%;
+    margin: auto;
+    transition: .5s;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 50px rgba(238, 234, 25, 0.808));
+    animation: Saturn 150s linear infinite;
+  }
+
+  .Saturn:hover {
+    transform: scale(1.2);
+    opacity: 0.95;
+    filter: drop-shadow(0px 0px 80px rgba(234, 238, 9, 0.979));
+  }
+
+  @keyframes Saturn {
+    100% {
+      right: 0%;
+      top: 300px;
+      width: 80px;
+    }
+  }
+
+  .typing-txt-block {
+    height: 70vh;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .typing-txt-block.bg-animation {
+    -webkit-animation: bg-animation 20s ease-in-out infinite;
+    animation: bg-animation 20s ease-in-out infinite;
+  }
+
+  @keyframes bg-animation {
+    0% {
+      background-position: top;
+    }
+
+    50% {
+      background-position: bottom;
+    }
+
+    100% {
+      background-position: top;
+    }
+  }
+
+  .typing-txt-block .container h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 5px;
+    color: transparent;
+  }
+
+  .typing-txt-block .container h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 25px;
+    left: 12px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    border-right: 1px solid #ffffff;
+    animation: type 3s steps(18), blink 0.5s infinite alternate;
+    -webkit-animation: type 3s steps(18), blink 0.5s infinite alternate;
+    white-space: nowrap;
+    font-family: '微軟正黑體';
+    transform: scale(0.6);
+    text-shadow: 0px 0px 5px rgba(255,255,255,0.7);
+    font-style: italic;
+    transition: .5s;
+    cursor: pointer;
+  }
+
+  .typing-txt-block .container h1:hover {
+    filter:drop-shadow( 0px 0px 15px rgba(255,255,255,0.9));
+    font-size: 2.1rem;
+
+  }
+
+  @keyframes type {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+
+    to {
+      border-color: #ffffff;
+    }
+  }
+
+  #showbox {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top:60%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    font-family: 'PT Sans', sans-serif;
+    font-style:italic;
+    font-weight: 700;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  #showbox:hover {
+    font-size: 2.8rem;
+    text-shadow: 0px 0px 15px rgba(255,255,255,0.8);
+  }
